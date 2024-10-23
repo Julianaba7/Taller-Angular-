@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="table-header">
+    <img src="https://i.ibb.co/MNWPmck/Ilustracio-n-sin-ti-tulo-49.png" alt="ITV logo">
+    <h1>TV Series</h1>
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <div class="content-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Channel</th>
+              <th scope="col">Seasons</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let s of series">
+              <td>
+                <dd>{{s.id}}</dd>
+              </td>
+              <td>
+                <dd>{{s.name}}</dd>
+              </td>
+              <td>
+                <dd>{{s.channel}}</dd>
+              </td>
+              <td>
+                <dd>{{s.seasons}}</dd>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <p>Season Average: {{ averageSeasons | number:'1.1-1' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
